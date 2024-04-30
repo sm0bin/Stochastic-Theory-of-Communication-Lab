@@ -9,13 +9,10 @@ for i = 1:totalExperiment
     numberOfFlipsUntilFirstHead(numberOfTrial + 1) = numberOfFlipsUntilFirstHead(numberOfTrial + 1) + 1;
 end
 
+numberOfFlipsUntilFirstHead = numberOfFlipsUntilFirstHead / totalExperiment;
+
 bar(numberOfFlipsUntilFirstHead);
 xlabel('Number of Flips to get First Head');
 ylabel('Frequency');
-title('Geometric Random Variable');
+title('Pdf of Geometric Distribution');
 grid on;
-
-%Annotation
-% for i = 1: numberOfFlipsUntilFirstHead
-%     text(i, numberOfFlipsUntilFirstHead(i), num2str(i), 'HorizontaAlignment', 'center', 'VerticalAlignment', 'bottom');
-% end

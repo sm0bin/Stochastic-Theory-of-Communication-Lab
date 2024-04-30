@@ -2,7 +2,6 @@ n_trials = 1000;
 n_flips = 21;
 
 values = zeros(1, n_flips);
-valuesFloat = zeros(1, n_flips);
 
 % Simulating coin flips
 for i = 1:n_trials
@@ -14,19 +13,8 @@ valuesFloat = values / n_trials; % Vectorized operation
 
 % Plotting
 figure;
-
-% Integer Values
-subplot(2,1,1);
-bar(1:n_flips, values);
+bar(valuesFloat);
 xlabel('Number of Heads');
 ylabel('Frequency');
-title('Integer Values');
-grid on;
-
-% Float Values
-subplot(2,1,2);
-bar(1:n_flips, valuesFloat);
-xlabel('Number of Heads');
-ylabel('Frequency');
-title('Float Values');
+title('Pdf of Binomial Distribution');
 grid on;
