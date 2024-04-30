@@ -13,8 +13,8 @@ def findSteadyState(transitionMatrix, threshold=1e-5, maxIterations=10000):
     for _ in range(maxIterations):
         previousResult = result
         result = np.dot(result, transitionMatrix)
-        print(_)
         if np.linalg.norm(result - previousResult, ord=1) < threshold:
+            print(_)
             break
 
     roundedMatrix = np.around(result, decimals=2)

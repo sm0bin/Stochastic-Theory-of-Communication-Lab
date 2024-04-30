@@ -18,9 +18,9 @@ for i = 1:maxIterations
     end
 end
 
-roundedMatrix = round(result, 2);
+% roundedMatrix = round(result, 2);
 
 disp('Steady State Matrix:');
 disp(result);
 disp('Rounded Steady State Matrix:');
-disp(roundedMatrix);
+% disp(roundedMatrix);
